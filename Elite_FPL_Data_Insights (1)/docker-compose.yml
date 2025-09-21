@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  fpl_cli:
+    build: .
+    image: fpl-tool:latest
+    environment:
+      - APP_MODE=cli
+      - DATA_DIR=/app/data
+      - MODELS_DIR=/app/models
+      - OUTPUT_DIR=/app/output
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./output:/app/output
+    working_dir: /app
+    command: ["python", "-m", "fpl_tool.cli", "--help"]
+
+  fpl_streamlit:
+    image: fpl-tool:latest
+    depends_on:
+      - fpl_cli
+    environment:
+      - APP_MODE=streamlit
+      - DATA_DIR=/app/data
+      - MODELS_DIR=/app/models
+      - OUTPUT_DIR=/app/output
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./output:/app/output
+
+  fpl_refresh:
+    image: fpl-tool:latest
+    depends_on:
+      - fpl_cli
+    environment:
+      - APP_MODE=refresh
+      - REFRESH_INTERVAL_HOURS=6
+      - DATA_DIR=/app/data
+      - MODELS_DIR=/app/models
+      - OUTPUT_DIR=/app/output
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./output:/app/output

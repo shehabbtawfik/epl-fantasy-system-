@@ -1,0 +1,209 @@
+(base) shehabtawfik@Shehabs-Mac-mini Elite_FPL_Data_Insights (1) % docker compose up --build
+WARN[0000] /Volumes/models/online builder/Elite_FPL_Data_Insights (1)/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 2/2
+ ✘ fpl_refresh Error   pull access denied for fpl-to...                    3.3s 
+ ✘ fpl_streamlit Error pull access denied for fpl-...                      3.3s 
+[+] Building 2.7s (21/21) FINISHED                                              
+ => [internal] load local bake definitions                                 0.0s
+ => => reading from stdin 590B                                             0.0s
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 1.73kB                                     0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim        1.8s
+ => [auth] library/python:pull token for registry-1.docker.io              0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [ 1/13] FROM docker.io/library/python:3.11-slim@sha256:a0939570b38cdd  0.0s
+ => => resolve docker.io/library/python:3.11-slim@sha256:a0939570b38cddeb  0.0s
+ => [internal] load build context                                          0.1s
+ => => transferring context: 20.85MB                                       0.1s
+ => CACHED [ 2/13] RUN apt-get update && apt-get install -y --no-install-  0.0s
+ => CACHED [ 3/13] RUN useradd -ms /bin/bash appuser && mkdir -p "/app" "  0.0s
+ => CACHED [ 4/13] WORKDIR /app                                            0.0s
+ => CACHED [ 5/13] COPY requirements.txt ./                                0.0s
+ => CACHED [ 6/13] RUN pip install --upgrade pip && pip install --no-cach  0.0s
+ => [ 7/13] COPY fpl_tool ./fpl_tool                                       0.0s
+ => [ 8/13] COPY fetch_fpl.py fixture_analysis.py minutes_model.py team_f  0.0s
+ => [ 9/13] COPY data ./data                                               0.0s
+ => [10/13] COPY models ./models                                           0.0s
+ => [11/13] COPY output ./output                                           0.0s
+ => [12/13] COPY entrypoint.sh /usr/local/bin/entrypoint.sh                0.0s
+ => [13/13] RUN chmod +x /usr/local/bin/entrypoint.sh && chown -R appuser  0.1s
+ => exporting to image                                                     0.3s
+ => => exporting layers                                                    0.1s
+ => => exporting manifest sha256:2bf2223aef326b1e03c848d2ceb9d1411394ed4e  0.0s
+ => => exporting config sha256:11de880003e0faf13100625d6005a52f013e55e524  0.0s
+ => => exporting attestation manifest sha256:4c65b246c0e9fe34e7d9c072e04a  0.0s
+ => => exporting manifest list sha256:551598bb5e9f0b87d4cf0d7d7e3ac13147b  0.0s
+ => => naming to docker.io/library/fpl-tool:latest                         0.0s
+ => => unpacking to docker.io/library/fpl-tool:latest                      0.1s
+ => resolving provenance for metadata file                                 0.0s
+[+] Running 5/5
+ ✔ fpl-tool:latest                                     Built               0.0s 
+ ✔ Network elite_fpl_data_insights1_default            Created             0.0s 
+ ✔ Container elite_fpl_data_insights1-fpl_cli-1        Created             0.0s 
+ ✔ Container elite_fpl_data_insights1-fpl_refresh-1    Created             0.0s 
+ ✔ Container elite_fpl_data_insights1-fpl_streamlit-1  Created             0.1s 
+Attaching to fpl_cli-1, fpl_refresh-1, fpl_streamlit-1
+fpl_cli-1  | [entrypoint] Running CLI: python -m fpl_tool.cli --help
+fpl_refresh-1  | [entrypoint] Starting periodic refresh every 6h
+fpl_refresh-1  | Sat Sep 20 15:09:36 UTC 2025
+fpl_streamlit-1  | [entrypoint] Starting Streamlit dashboard on :8501
+fpl_streamlit-1  | 
+fpl_streamlit-1  | Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+fpl_streamlit-1  | 
+fpl_streamlit-1  | 
+fpl_streamlit-1  |   You can now view your Streamlit app in your browser.
+fpl_streamlit-1  | 
+fpl_streamlit-1  |   URL: http://0.0.0.0:8501
+fpl_streamlit-1  | 
+fpl_refresh-1    | Building FPL dataset...
+fpl_refresh-1    | Seasons: LAST3, Include current: True
+fpl_refresh-1    | Output directory: /app/data
+fpl_refresh-1    | ✓ Dataset build completed successfully
+fpl_refresh-1    | {
+fpl_refresh-1    |   "status": "success",
+fpl_refresh-1    |   "seasons": "LAST3",
+fpl_refresh-1    |   "include_current": true,
+fpl_refresh-1    |   "output_dir": "/app/data",
+fpl_refresh-1    |   "players_count": 687,
+fpl_refresh-1    |   "features_count": 25
+fpl_refresh-1    | }
+fpl_cli-1        |                                                                                 
+fpl_cli-1        |  Usage: python -m fpl_tool.cli [OPTIONS] COMMAND [ARGS]...                      
+fpl_cli-1        |                                                                                 
+fpl_cli-1        |  FPL Tool - Fantasy Premier League Optimization & Recommendations               
+fpl_cli-1        |                                                                                 
+fpl_cli-1        | ╭─ Options ────────────────────────────────────────────────────────────────────╮
+fpl_cli-1        | │ --install-completion          Install completion for the current shell.      │
+fpl_cli-1        | │ --show-completion             Show completion for the current shell, to copy │
+fpl_cli-1        | │                               it or customize the installation.              │
+fpl_cli-1        | │ --help                        Show this message and exit.                    │
+fpl_cli-1        | ╰──────────────────────────────────────────────────────────────────────────────╯
+fpl_cli-1        | ╭─ Commands ───────────────────────────────────────────────────────────────────╮
+fpl_cli-1        | │ build-dataset    Build and update FPL dataset with latest data.              │
+fpl_cli-1        | │ project          Generate expected points projections for specified          │
+fpl_cli-1        | │                  gameweek.                                                   │
+fpl_cli-1        | │ optimize         Optimize FPL squad under constraints.                       │
+fpl_cli-1        | │ recommend-gw     Generate complete gameweek recommendations.                 │
+fpl_cli-1        | │ validate-squad   Validate FPL squad compliance with all rules.               │
+fpl_cli-1        | │ version          Show FPL Tool version information.                          │
+fpl_cli-1        | ╰──────────────────────────────────────────────────────────────────────────────╯
+fpl_cli-1        | 
+fpl_cli-1 exited with code 0
+fpl_refresh-1    | Generating projections for GWCURRENT...
+fpl_refresh-1    | Projection horizon: 6 gameweeks
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Loading player data from /app/data/fpl_xpts_predictions_enhanced.csv
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Loaded 571 available players
+fpl_refresh-1    | INFO:fpl_tool.recommender:Loading recommendation data...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Loaded 687 players for recommendations
+fpl_refresh-1    | ⠋ Projections completed!
+fpl_refresh-1    | ✓ Projections saved to /app/output/projections_gwCURRENT.csv
+fpl_refresh-1    | {
+fpl_refresh-1    |   "status": "success",
+fpl_refresh-1    |   "gameweek": "CURRENT",
+fpl_refresh-1    |   "horizon": 6,
+fpl_refresh-1    |   "output_file": "/app/output/projections_gwCURRENT.csv",
+fpl_refresh-1    |   "players_projected": 687
+fpl_refresh-1    | }
+fpl_refresh-1    | Generating GWCURRENT recommendations...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Loading player data from /app/data/fpl_xpts_predictions_enhanced.csv
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Loaded 571 available players
+fpl_refresh-1    | INFO:fpl_tool.recommender:Loading recommendation data...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Loaded 687 players for recommendations
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating complete recommendations for GW1...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating balanced optimal squad...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Starting squad optimization...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Solving optimization problem...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Optimization completed successfully. Formation: 1-5-4-1, Cost: £97.0m
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating premium optimal squad...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Starting squad optimization...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Solving optimization problem...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Optimization completed successfully. Formation: 1-4-5-1, Cost: £100.0m
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating value optimal squad...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Starting squad optimization...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Solving optimization problem...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Optimization completed successfully. Formation: 1-4-4-2, Cost: £64.0m
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating differential optimal squad...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Starting squad optimization...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Solving optimization problem...
+fpl_refresh-1    | INFO:fpl_tool.optimizer:Optimization completed successfully. Formation: 1-5-3-2, Cost: £78.5m
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating positional watchlists...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating top 50 overall rankings...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating differentials (≤10.0% ownership)...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating budget enablers...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating captaincy recommendations...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Generating chip strategy recommendations...
+fpl_refresh-1    | INFO:fpl_tool.recommender:Complete recommendations generated successfully
+fpl_refresh-1    | INFO:fpl_tool.recommender:Exported 9 recommendation files to /app/output
+fpl_refresh-1    | ⠧ Recommendations completed!
+fpl_refresh-1    | ✓ GWCURRENT recommendations generated successfully!
+fpl_refresh-1    | 
+fpl_refresh-1    | Recommendation Summary:
+fpl_refresh-1    | Optimal Squad Formation: 1-5-4-1
+fpl_refresh-1    | Total Cost: £97.0m
+fpl_refresh-1    | Expected Points: 31.3
+fpl_refresh-1    | Captain: Virgil van Dijk
+fpl_refresh-1    | 
+fpl_refresh-1    | Top 5 Overall Players:
+fpl_refresh-1    | ┏━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━┓
+fpl_refresh-1    | ┃ Rank ┃ Player              ┃ Position ┃ Team ┃ Price ┃ xPts ┃
+fpl_refresh-1    | ┡━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━┩
+fpl_refresh-1    | │ 1    │ Virgil van Dijk     │ DEF      │ LIV  │ £6.0m │ 3.2  │
+fpl_refresh-1    | │ 2    │ Sam Byram           │ DEF      │ LEE  │ £4.0m │ 3.1  │
+fpl_refresh-1    | │ 3    │ Isaac Schmidt       │ DEF      │ LEE  │ £4.0m │ 3.1  │
+fpl_refresh-1    | │ 4    │ Joe Rodon           │ DEF      │ LEE  │ £4.0m │ 3.1  │
+fpl_refresh-1    | │ 5    │ Gabriel Gudmundsson │ DEF      │ LEE  │ £4.0m │ 3.1  │
+fpl_refresh-1    | └──────┴─────────────────────┴──────────┴──────┴───────┴──────┘
+fpl_refresh-1    | 
+fpl_refresh-1    | Files exported to /app/output/
+fpl_refresh-1    |   • top_50: top_50_overall.csv
+fpl_refresh-1    |   • watchlist_GKP: watchlist_gkp.csv
+fpl_refresh-1    |   • watchlist_DEF: watchlist_def.csv
+fpl_refresh-1    |   • watchlist_MID: watchlist_mid.csv
+fpl_refresh-1    |   • watchlist_FWD: watchlist_fwd.csv
+fpl_refresh-1    |   • squad_balanced: optimal_squad_balanced.csv
+fpl_refresh-1    |   • squad_premium: optimal_squad_premium.csv
+fpl_refresh-1    |   • squad_value: optimal_squad_value.csv
+fpl_refresh-1    |   • squad_differential: optimal_squad_differential.csv
+fpl_refresh-1    | {
+fpl_refresh-1    |   "status": "success",
+fpl_refresh-1    |   "gameweek": "CURRENT",
+fpl_refresh-1    |   "budget": 100.0,
+fpl_refresh-1    |   "optimal_formation": "1-5-4-1",
+fpl_refresh-1    |   "optimal_cost": 97.0,
+fpl_refresh-1    |   "optimal_points": 31.295637990388144,
+fpl_refresh-1    |   "exported_files": {
+fpl_refresh-1    |     "top_50": "/app/output/top_50_overall.csv",
+fpl_refresh-1    |     "watchlist_GKP": "/app/output/watchlist_gkp.csv",
+fpl_refresh-1    |     "watchlist_DEF": "/app/output/watchlist_def.csv",
+fpl_refresh-1    |     "watchlist_MID": "/app/output/watchlist_mid.csv",
+fpl_refresh-1    |     "watchlist_FWD": "/app/output/watchlist_fwd.csv",
+fpl_refresh-1    |     "squad_balanced": "/app/output/optimal_squad_balanced.csv",
+fpl_refresh-1    |     "squad_premium": "/app/output/optimal_squad_premium.csv",
+fpl_refresh-1    |     "squad_value": "/app/output/optimal_squad_value.csv",
+fpl_refresh-1    |     "squad_differential": "/app/output/optimal_squad_differential.csv"
+fpl_refresh-1    |   },
+fpl_refresh-1    |   "top_player": "Virgil van Dijk"
+fpl_refresh-1    | }
+fpl_refresh-1    | [entrypoint] Sleeping for 21600s...
+fpl_streamlit-1  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+fpl_streamlit-1  |   /usr/local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py:  
+fpl_streamlit-1  |   128 in exec_func_with_error_handling                                                  
+fpl_streamlit-1  |                                                                                         
+fpl_streamlit-1  |   /usr/local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner  
+fpl_streamlit-1  |   .py:669 in code_to_exec                                                               
+fpl_streamlit-1  |                                                                                         
+fpl_streamlit-1  |   /app/fpl_tool/app_streamlit.py:19 in <module>                                         
+fpl_streamlit-1  |                                                                                         
+fpl_streamlit-1  |      16 import logging                                                                  
+fpl_streamlit-1  |      17 import os                                                                       
+fpl_streamlit-1  |      18                                                                                 
+fpl_streamlit-1  |   ❱  19 from .recommender import FPLRecommender                                         
+fpl_streamlit-1  |      20 from .optimizer import FPLOptimizer                                             
+fpl_streamlit-1  |      21 from .validator import FPLValidator                                             
+fpl_streamlit-1  |      22                                                                                 
+fpl_streamlit-1  | ────────────────────────────────────────────────────────────────────────────────────────
+fpl_streamlit-1  | ImportError: attempted relative import with no known parent package
+
+
++

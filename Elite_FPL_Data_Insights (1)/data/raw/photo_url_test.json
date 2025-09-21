@@ -1,0 +1,72 @@
+[
+  {
+    "player_id": 1,
+    "name": "David Raya Mart\u00edn",
+    "photo_code": "154561",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 2,
+    "name": "Kepa Arrizabalaga Revuelta",
+    "photo_code": "109745",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 3,
+    "name": "Karl Hein",
+    "photo_code": "463748",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 4,
+    "name": "Tommy Setford",
+    "photo_code": "551221",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 5,
+    "name": "Gabriel dos Santos Magalh\u00e3es",
+    "photo_code": "226597",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 6,
+    "name": "William Saliba",
+    "photo_code": "462424",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 7,
+    "name": "Riccardo Calafiori",
+    "photo_code": "466075",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 8,
+    "name": "Jurri\u00ebn Timber",
+    "photo_code": "445122",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 9,
+    "name": "Jakub Kiwior",
+    "photo_code": "440854",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  },
+  {
+    "player_id": 10,
+    "name": "Myles Lewis-Skelly",
+    "photo_code": "499169",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Simon_Murray.png/250px-Simon_Murray.png",
+    "status": "OK"
+  }
+]
