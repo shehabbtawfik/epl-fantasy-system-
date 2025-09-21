@@ -1,0 +1,95 @@
+Act like an elite Fantasy Premier League (FPL) data engineer, sports data scientist, and optimization-focused software architect. You are working inside ChatGPT in a web browser (not the API).
+
+OBJECTIVE
+Build a clean, trustworthy dataset for the last three completed FPL seasons plus the current season’s live data using the exact method and endpoints described in this article: https://medium.com/@frenzelts/fantasy-premier-league-api-endpoints-a-detailed-guide-acbd5598eb19. Then, use that dataset to generate a dynamic, Gameweek-by-Gameweek player recommendation system that maximizes expected points while strictly obeying all FPL rules. Every recommendation must show the player’s current club and a working headshot image.
+
+CONSTRAINTS & ASSUMPTIONS
+- “Last 3 years” = the three most recently completed seasons at run time; “current season” = the one now in progress.
+- Planning horizon: default next 3–6 Gameweeks (GW) unless I specify otherwise.
+- Default team value: £100.0m; bank £0.0m; chips: all available; risk tolerance: medium. If I provide different values, adapt automatically without asking follow-ups.
+- Enforce FPL rules at all times: 15-man squad (2 GK, 5 DEF, 5 MID, 3 FWD), ≤3 per club, valid XI formation (1 GK; 3–5 DEF; 3–5 MID; 1–3 FWD), current prices to one decimal, and a weekly captain/vice.
+
+PART A — DATA (FOLLOW THE LINKED METHOD PRECISELY; ADD CITATIONS)
+1) Identify the current season, current GW, and the full fixtures calendar.
+2) Use the endpoints (per the Medium guide) including, at minimum:
+   - /api/bootstrap-static/  (players, teams, positions, prices, photo keys)
+   - /api/fixtures/ and /api/fixtures/?event={gw}  (fixtures; blank/double detection)
+   - /api/element-summary/{player_id}/  (per-player history & form)
+   - /api/event/{gw}/live/  (live stats when useful)
+   - (Optional) /api/entry/{team_id}/history/ if needed for benchmarking or examples
+   Cite the article and each endpoint you rely on with direct links.
+3) Collect the last three completed seasons’ player-level summaries:
+   minutes, starts, goals, assists, clean sheets, penalties (taken/scored), bonus, saves (GK), total points, price ranges, and per-90 rates.
+4) Current-season augmentation for every registered player:
+   player_id, full_name, position, club (name + short code), now_price, status flag/injury note, chance_of_playing_next, predicted_minutes proxy, next 6 fixtures (opponent, H/A, days rest, difficulty), set-piece/penalty indicators if known.
+5) Player photos:
+   Build a reliable photo_url from the official “photo” key in bootstrap-static. Verify the exact path pattern at run time (e.g., resources.premierleague.com/.../p{photo_key}.png). Implement a fallback if the pattern differs (e.g., check 110x140 and 250x250 directories). Keep the link working.
+6) Team helpers:
+   team_strength_attack, team_strength_defence (recent form), and a fixture_congestion_index (matches per 7–10 days).
+7) Create a tidy, de-duplicated dataset with this minimum schema:
+   player_id, player_name, position, club, club_code, now_price, status_flag, chance_playing_next, mins_prev_3y, goals_prev_3y, assists_prev_3y, cs_prev_3y, bonus_prev_3y, pens_taken_prev_3y, total_points_prev_3y, points_per_90_prev_3y, xg_recent, xa_recent, xgi_recent, xcs_recent, set_piece_role, predicted_minutes_next, next6_opponents, next6_home_away, next6_fixture_difficulty, next6_days_rest, injury_note, photo_url, team_strength_attack, team_strength_defence, fixture_congestion_index.
+8) Deliverables for the data step:
+   - A preview table (top 20 rows) inline.
+   - Full CSV as a fenced code block (so I can copy/save).
+   - Short “Data Quality” notes: missingness, sanity checks, and how unknowns are handled.
+   - Explicit citations (the Medium article and the exact FPL endpoints used).
+
+PART B — MODEL (CLEAR FORMULA + SENSITIVITY)
+9) Compute expected points (xPts) per player for the next GW and cumulatively for the next 3–6 GWs:
+   - Base attacking production via recent xGI (or goals/assists rates where xGI is absent), defenders/GKs via CS/save/xGA suppression proxies.
+   - Minutes model from starts/subs history, flags, travel/congestion, and manager rotation patterns.
+   - Fixture adjustment by opponent strength (attack/defence), home/away, days rest, and blank/double flags; account for diminishing returns in doubles due to rotation.
+   - Set-piece/penalty boosts where applicable.
+   - Risk modifiers: yellow/red card risk, sub-on risk, known rotation.
+   - Provide the concise formula, the feature weights, and a sensitivity table (±10–20% in minutes/xGI) to show robustness.
+10) Backtest briefly against recent weeks and report error bands.
+
+PART C — OPTIMIZATION (WEEKLY RECOMMENDER UNDER FPL RULES)
+11) Build an optimizer that outputs:
+   - A “General Optimal” 15-man squad under budget and ≤3-per-club caps.
+   - A valid starting XI, bench order (1–3), captain and vice for the target GW.
+   - Positional watchlists: Top 15 GK, 25 DEF, 25 MID, 20 FWD by next-GW xPts and by next-6-GW xPts.
+   - Overall Top 50 list with club and headshot shown.
+   - Differentials (<10% ownership if available), budget enablers (≤£4.5m/≤£5.0m), premium captaincy candidates, and safer picks.
+12) Special weeks:
+   - Double GWs: favor multi-fixture players with a rotation penalty.
+   - Blank GWs: ensure fieldable XI; if not feasible, propose chip usage (Free Hit/Wildcard).
+13) Print a “Rules Validation” summary confirming: 15-player structure, valid formation, ≤3 per club, and budget ≤ £100.0m (or my provided value).
+
+PART D — PROGRAM DELIVERABLES (CODE + USAGE)
+14) Provide production-grade Python 3.11 code (modular, typed) that can run locally:
+   - datasources.py (FPL API wrappers with retries/backoff and local caching)
+   - etl.py (season pulls → tidy tables → CSV/Parquet writers)
+   - features.py (rolling form, congestion, opponent strength)
+   - projections.py (xPts computation with documented formula)
+   - optimizer.py (ILP using pulp or OR-Tools; enforces rules)
+   - recommender.py (end-to-end: fetch → build dataset → project → optimize)
+   - cli.py (Typer-based CLI)
+   - app_streamlit.py (optional mini-dashboard with sortable tables, headshots, and club badges)
+   - tests/ (pytest: rules validator, optimizer feasibility, photo URL builder)
+   - README.md (install, endpoints list with links, how to refresh weekly)
+   Include requirements.txt (pandas, numpy, requests, pydantic, pulp or ortools, typer, rich, streamlit [optional]).
+15) CLI examples in the answer:
+   - python -m fpl_tool.cli build-dataset --seasons LAST3 --current
+   - python -m fpl_tool.cli project --gw CURRENT --horizon 6
+   - python -m fpl_tool.cli optimize --budget 100.0 --max-per-club 3 --gw CURRENT
+   - python -m fpl_tool.cli recommend-gw --gw CURRENT --export out/recs_gw.csv --print-images
+16) In every recommendation table, include two columns:
+   - Club (short name)
+   - Photo (a working thumbnail via markdown/HTML, e.g. <img src="PHOTO_URL" alt="Name" width="36" />)
+   Verify the image URL works; if not, supply a fallback or mark “Unknown”.
+
+PART E — OUTPUT ORDER & STYLE (LONG, PRECISE, WITH CITATIONS)
+17) Organize the final answer with these headings:
+   1) Data Sources & Method (explicitly reference and link the Medium guide + each FPL endpoint)
+   2) Dataset Preview (top 20 rows) + Downloadable CSV
+   3) Projection Method (formula, features, weights, sensitivity)
+   4) Rankings (Top 50 overall + positional lists; include Club & Photo columns)
+   5) Optimal 15-Man Squad & Starting XI (captain/vice, bench order, spend by position/club)
+   6) Alternative Squads: Ultra-Value, Balanced, Premium-Heavy
+   7) Validation (prove rule compliance and budget math)
+   8) How to Refresh Weekly (e.g., “Run recommend-gw --gw N+1”)
+   Add short, clear rationales (no hidden chain-of-thought), show all numbers with units, and mark uncertain fields “Unknown”.
+18) If I later paste my current team, re-run the optimizer to propose 1–2 free transfers (and a hit plan alternative) with net xPts delta; advise chip usage as needed.
+
+Begin now by reading and citing the linked Medium article, enumerating the concrete endpoints you’ll call from it, assembling the last-3-seasons dataset, and proceeding through modeling and optimization exactly in the order above. Take a deep breath and work on this problem step-by-step.

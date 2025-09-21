@@ -1,0 +1,761 @@
+team_id,team_name,gameweek,fixture_count,is_dgw,is_bgw,congestion_index,rotation_risk,is_home,opponent_id
+1,Arsenal,1,1,False,False,1.0,0.05,False,14.0
+1,Arsenal,2,1,False,False,1.0,0.05,True,11.0
+1,Arsenal,3,1,False,False,0.5,0.05,False,12.0
+1,Arsenal,4,1,False,False,0.5,0.05,True,16.0
+1,Arsenal,5,1,False,False,1.0,0.05,True,13.0
+1,Arsenal,6,1,False,False,1.5,0.15,False,15.0
+1,Arsenal,7,1,False,False,1.0,0.15000000000000002,True,19.0
+1,Arsenal,8,1,False,False,1.0,0.05,False,10.0
+1,Arsenal,9,1,False,False,1.0,0.05,True,8.0
+1,Arsenal,10,1,False,False,1.0,0.05,False,3.0
+1,Arsenal,11,1,False,False,0.0,0.0,,
+1,Arsenal,12,1,False,False,0.0,0.0,,
+1,Arsenal,13,1,False,False,0.0,0.0,,
+1,Arsenal,14,1,False,False,0.0,0.0,,
+1,Arsenal,15,1,False,False,0.0,0.0,,
+1,Arsenal,16,1,False,False,0.0,0.0,,
+1,Arsenal,17,1,False,False,0.0,0.0,,
+1,Arsenal,18,1,False,False,0.0,0.0,,
+1,Arsenal,19,1,False,False,0.0,0.0,,
+1,Arsenal,20,1,False,False,0.0,0.0,,
+1,Arsenal,21,1,False,False,0.0,0.0,,
+1,Arsenal,22,1,False,False,0.0,0.0,,
+1,Arsenal,23,1,False,False,0.0,0.0,,
+1,Arsenal,24,1,False,False,0.0,0.0,,
+1,Arsenal,25,1,False,False,0.0,0.0,,
+1,Arsenal,26,1,False,False,0.0,0.0,,
+1,Arsenal,27,1,False,False,0.0,0.0,,
+1,Arsenal,28,1,False,False,0.0,0.0,,
+1,Arsenal,29,1,False,False,0.0,0.0,,
+1,Arsenal,30,1,False,False,0.0,0.0,,
+1,Arsenal,31,1,False,False,0.0,0.0,,
+1,Arsenal,32,1,False,False,0.0,0.0,,
+1,Arsenal,33,1,False,False,0.0,0.0,,
+1,Arsenal,34,1,False,False,0.0,0.0,,
+1,Arsenal,35,1,False,False,0.0,0.0,,
+1,Arsenal,36,1,False,False,0.0,0.0,,
+1,Arsenal,37,1,False,False,0.0,0.0,,
+1,Arsenal,38,1,False,False,0.0,0.0,,
+2,Aston Villa,1,1,False,False,0.5,0.05,True,15.0
+2,Aston Villa,2,1,False,False,0.5,0.05,False,5.0
+2,Aston Villa,3,1,False,False,0.5,0.05,True,8.0
+2,Aston Villa,4,1,False,False,0.5,0.05,False,9.0
+2,Aston Villa,5,1,False,False,1.0,0.05,False,17.0
+2,Aston Villa,6,1,False,False,1.5,0.15,True,10.0
+2,Aston Villa,7,1,False,False,1.0,0.05,True,3.0
+2,Aston Villa,8,1,False,False,1.0,0.05,False,18.0
+2,Aston Villa,9,1,False,False,1.0,0.05,True,13.0
+2,Aston Villa,10,1,False,False,1.0,0.05,False,12.0
+2,Aston Villa,11,1,False,False,0.0,0.0,,
+2,Aston Villa,12,1,False,False,0.0,0.0,,
+2,Aston Villa,13,1,False,False,0.0,0.0,,
+2,Aston Villa,14,1,False,False,0.0,0.0,,
+2,Aston Villa,15,1,False,False,0.0,0.0,,
+2,Aston Villa,16,1,False,False,0.0,0.0,,
+2,Aston Villa,17,1,False,False,0.0,0.0,,
+2,Aston Villa,18,1,False,False,0.0,0.0,,
+2,Aston Villa,19,1,False,False,0.0,0.0,,
+2,Aston Villa,20,1,False,False,0.0,0.0,,
+2,Aston Villa,21,1,False,False,0.0,0.0,,
+2,Aston Villa,22,1,False,False,0.0,0.0,,
+2,Aston Villa,23,1,False,False,0.0,0.0,,
+2,Aston Villa,24,1,False,False,0.0,0.0,,
+2,Aston Villa,25,1,False,False,0.0,0.0,,
+2,Aston Villa,26,1,False,False,0.0,0.0,,
+2,Aston Villa,27,1,False,False,0.0,0.0,,
+2,Aston Villa,28,1,False,False,0.0,0.0,,
+2,Aston Villa,29,1,False,False,0.0,0.0,,
+2,Aston Villa,30,1,False,False,0.0,0.0,,
+2,Aston Villa,31,1,False,False,0.0,0.0,,
+2,Aston Villa,32,1,False,False,0.0,0.0,,
+2,Aston Villa,33,1,False,False,0.0,0.0,,
+2,Aston Villa,34,1,False,False,0.0,0.0,,
+2,Aston Villa,35,1,False,False,0.0,0.0,,
+2,Aston Villa,36,1,False,False,0.0,0.0,,
+2,Aston Villa,37,1,False,False,0.0,0.0,,
+2,Aston Villa,38,1,False,False,0.0,0.0,,
+3,Burnley,1,1,False,False,1.0,0.05,False,18.0
+3,Burnley,2,1,False,False,1.5,0.15,True,17.0
+3,Burnley,3,1,False,False,1.0,0.05,False,14.0
+3,Burnley,4,1,False,False,1.0,0.05,True,12.0
+3,Burnley,5,1,False,False,1.5,0.15,True,16.0
+3,Burnley,6,1,False,False,1.5,0.15,False,13.0
+3,Burnley,7,1,False,False,1.0,0.05,False,2.0
+3,Burnley,8,1,False,False,1.0,0.05,True,11.0
+3,Burnley,9,1,False,False,1.0,0.05,False,20.0
+3,Burnley,10,1,False,False,1.0,0.05,True,1.0
+3,Burnley,11,1,False,False,0.0,0.0,,
+3,Burnley,12,1,False,False,0.0,0.0,,
+3,Burnley,13,1,False,False,0.0,0.0,,
+3,Burnley,14,1,False,False,0.0,0.0,,
+3,Burnley,15,1,False,False,0.0,0.0,,
+3,Burnley,16,1,False,False,0.0,0.0,,
+3,Burnley,17,1,False,False,0.0,0.0,,
+3,Burnley,18,1,False,False,0.0,0.0,,
+3,Burnley,19,1,False,False,0.0,0.0,,
+3,Burnley,20,1,False,False,0.0,0.0,,
+3,Burnley,21,1,False,False,0.0,0.0,,
+3,Burnley,22,1,False,False,0.0,0.0,,
+3,Burnley,23,1,False,False,0.0,0.0,,
+3,Burnley,24,1,False,False,0.0,0.0,,
+3,Burnley,25,1,False,False,0.0,0.0,,
+3,Burnley,26,1,False,False,0.0,0.0,,
+3,Burnley,27,1,False,False,0.0,0.0,,
+3,Burnley,28,1,False,False,0.0,0.0,,
+3,Burnley,29,1,False,False,0.0,0.0,,
+3,Burnley,30,1,False,False,0.0,0.0,,
+3,Burnley,31,1,False,False,0.0,0.0,,
+3,Burnley,32,1,False,False,0.0,0.0,,
+3,Burnley,33,1,False,False,0.0,0.0,,
+3,Burnley,34,1,False,False,0.0,0.0,,
+3,Burnley,35,1,False,False,0.0,0.0,,
+3,Burnley,36,1,False,False,0.0,0.0,,
+3,Burnley,37,1,False,False,0.0,0.0,,
+3,Burnley,38,1,False,False,0.0,0.0,,
+4,Bournemouth,1,0,False,True,0.0,0.0,,
+4,Bournemouth,2,1,False,False,1.0,0.05,True,20.0
+4,Bournemouth,3,1,False,False,1.0,0.05,False,18.0
+4,Bournemouth,4,1,False,False,1.0,0.05,True,6.0
+4,Bournemouth,5,1,False,False,1.5,0.15,True,15.0
+4,Bournemouth,6,1,False,False,1.5,0.15,False,11.0
+4,Bournemouth,7,1,False,False,1.0,0.05,True,10.0
+4,Bournemouth,8,1,False,False,1.0,0.05,False,8.0
+4,Bournemouth,9,1,False,False,1.0,0.05,True,16.0
+4,Bournemouth,10,1,False,False,1.0,0.05,False,13.0
+4,Bournemouth,11,1,False,False,1.0,0.05,False,2.0
+4,Bournemouth,12,1,False,False,0.0,0.0,,
+4,Bournemouth,13,1,False,False,0.0,0.0,,
+4,Bournemouth,14,1,False,False,0.0,0.0,,
+4,Bournemouth,15,1,False,False,0.0,0.0,,
+4,Bournemouth,16,1,False,False,0.0,0.0,,
+4,Bournemouth,17,1,False,False,0.0,0.0,,
+4,Bournemouth,18,1,False,False,0.0,0.0,,
+4,Bournemouth,19,1,False,False,0.0,0.0,,
+4,Bournemouth,20,1,False,False,0.0,0.0,,
+4,Bournemouth,21,1,False,False,0.0,0.0,,
+4,Bournemouth,22,1,False,False,0.0,0.0,,
+4,Bournemouth,23,1,False,False,0.0,0.0,,
+4,Bournemouth,24,1,False,False,0.0,0.0,,
+4,Bournemouth,25,1,False,False,0.0,0.0,,
+4,Bournemouth,26,1,False,False,0.0,0.0,,
+4,Bournemouth,27,1,False,False,0.0,0.0,,
+4,Bournemouth,28,1,False,False,0.0,0.0,,
+4,Bournemouth,29,1,False,False,0.0,0.0,,
+4,Bournemouth,30,1,False,False,0.0,0.0,,
+4,Bournemouth,31,1,False,False,0.0,0.0,,
+4,Bournemouth,32,1,False,False,0.0,0.0,,
+4,Bournemouth,33,1,False,False,0.0,0.0,,
+4,Bournemouth,34,1,False,False,0.0,0.0,,
+4,Bournemouth,35,1,False,False,0.0,0.0,,
+4,Bournemouth,36,1,False,False,0.0,0.0,,
+4,Bournemouth,37,1,False,False,0.0,0.0,,
+4,Bournemouth,38,1,False,False,0.0,0.0,,
+5,Brentford,1,1,False,False,1.0,0.05,False,16.0
+5,Brentford,2,1,False,False,1.5,0.15,True,2.0
+5,Brentford,3,1,False,False,1.0,0.05,False,17.0
+5,Brentford,4,1,False,False,1.0,0.05,True,7.0
+5,Brentford,5,1,False,False,1.5,0.15,False,10.0
+5,Brentford,6,1,False,False,1.0,0.05,True,14.0
+5,Brentford,7,1,False,False,0.5,0.05,True,13.0
+5,Brentford,8,1,False,False,1.0,0.05,False,19.0
+5,Brentford,9,1,False,False,1.0,0.05,True,12.0
+5,Brentford,10,1,False,False,1.0,0.05,False,8.0
+5,Brentford,11,1,False,False,0.0,0.0,,
+5,Brentford,12,1,False,False,0.0,0.0,,
+5,Brentford,13,1,False,False,0.0,0.0,,
+5,Brentford,14,1,False,False,0.0,0.0,,
+5,Brentford,15,1,False,False,0.0,0.0,,
+5,Brentford,16,1,False,False,0.0,0.0,,
+5,Brentford,17,1,False,False,0.0,0.0,,
+5,Brentford,18,1,False,False,0.0,0.0,,
+5,Brentford,19,1,False,False,0.0,0.0,,
+5,Brentford,20,1,False,False,0.0,0.0,,
+5,Brentford,21,1,False,False,0.0,0.0,,
+5,Brentford,22,1,False,False,0.0,0.0,,
+5,Brentford,23,1,False,False,0.0,0.0,,
+5,Brentford,24,1,False,False,0.0,0.0,,
+5,Brentford,25,1,False,False,0.0,0.0,,
+5,Brentford,26,1,False,False,0.0,0.0,,
+5,Brentford,27,1,False,False,0.0,0.0,,
+5,Brentford,28,1,False,False,0.0,0.0,,
+5,Brentford,29,1,False,False,0.0,0.0,,
+5,Brentford,30,1,False,False,0.0,0.0,,
+5,Brentford,31,1,False,False,0.0,0.0,,
+5,Brentford,32,1,False,False,0.0,0.0,,
+5,Brentford,33,1,False,False,0.0,0.0,,
+5,Brentford,34,1,False,False,0.0,0.0,,
+5,Brentford,35,1,False,False,0.0,0.0,,
+5,Brentford,36,1,False,False,0.0,0.0,,
+5,Brentford,37,1,False,False,0.0,0.0,,
+5,Brentford,38,1,False,False,0.0,0.0,,
+6,Brighton,1,1,False,False,0.5,0.05,True,10.0
+6,Brighton,2,1,False,False,1.0,0.05,False,9.0
+6,Brighton,3,1,False,False,1.0,0.05,True,13.0
+6,Brighton,4,1,False,False,1.0,0.05,False,4.0
+6,Brighton,5,1,False,False,1.5,0.15,True,18.0
+6,Brighton,6,1,False,False,1.5,0.15,False,7.0
+6,Brighton,7,1,False,False,1.0,0.05,False,20.0
+6,Brighton,8,1,False,False,1.0,0.05,True,15.0
+6,Brighton,9,1,False,False,1.0,0.05,False,14.0
+6,Brighton,10,1,False,False,1.0,0.05,True,11.0
+6,Brighton,11,1,False,False,0.0,0.0,,
+6,Brighton,12,1,False,False,0.0,0.0,,
+6,Brighton,13,1,False,False,0.0,0.0,,
+6,Brighton,14,1,False,False,0.0,0.0,,
+6,Brighton,15,1,False,False,0.0,0.0,,
+6,Brighton,16,1,False,False,0.0,0.0,,
+6,Brighton,17,1,False,False,0.0,0.0,,
+6,Brighton,18,1,False,False,0.0,0.0,,
+6,Brighton,19,1,False,False,0.0,0.0,,
+6,Brighton,20,1,False,False,0.0,0.0,,
+6,Brighton,21,1,False,False,0.0,0.0,,
+6,Brighton,22,1,False,False,0.0,0.0,,
+6,Brighton,23,1,False,False,0.0,0.0,,
+6,Brighton,24,1,False,False,0.0,0.0,,
+6,Brighton,25,1,False,False,0.0,0.0,,
+6,Brighton,26,1,False,False,0.0,0.0,,
+6,Brighton,27,1,False,False,0.0,0.0,,
+6,Brighton,28,1,False,False,0.0,0.0,,
+6,Brighton,29,1,False,False,0.0,0.0,,
+6,Brighton,30,1,False,False,0.0,0.0,,
+6,Brighton,31,1,False,False,0.0,0.0,,
+6,Brighton,32,1,False,False,0.0,0.0,,
+6,Brighton,33,1,False,False,0.0,0.0,,
+6,Brighton,34,1,False,False,0.0,0.0,,
+6,Brighton,35,1,False,False,0.0,0.0,,
+6,Brighton,36,1,False,False,0.0,0.0,,
+6,Brighton,37,1,False,False,0.0,0.0,,
+6,Brighton,38,1,False,False,0.0,0.0,,
+7,Chelsea,1,1,False,False,1.0,0.05,True,8.0
+7,Chelsea,2,1,False,False,1.0,0.15000000000000002,False,19.0
+7,Chelsea,3,1,False,False,0.5,0.05,True,10.0
+7,Chelsea,4,1,False,False,1.0,0.05,False,5.0
+7,Chelsea,5,1,False,False,1.5,0.15,False,14.0
+7,Chelsea,6,1,False,False,1.5,0.15,True,6.0
+7,Chelsea,7,1,False,False,1.0,0.05,True,12.0
+7,Chelsea,8,1,False,False,1.0,0.05,False,16.0
+7,Chelsea,9,1,False,False,1.0,0.05,True,17.0
+7,Chelsea,10,1,False,False,1.0,0.05,False,18.0
+7,Chelsea,11,1,False,False,0.0,0.0,,
+7,Chelsea,12,1,False,False,0.0,0.0,,
+7,Chelsea,13,1,False,False,0.0,0.0,,
+7,Chelsea,14,1,False,False,0.0,0.0,,
+7,Chelsea,15,1,False,False,0.0,0.0,,
+7,Chelsea,16,1,False,False,0.0,0.0,,
+7,Chelsea,17,1,False,False,0.0,0.0,,
+7,Chelsea,18,1,False,False,0.0,0.0,,
+7,Chelsea,19,1,False,False,0.0,0.0,,
+7,Chelsea,20,1,False,False,0.0,0.0,,
+7,Chelsea,21,1,False,False,0.0,0.0,,
+7,Chelsea,22,1,False,False,0.0,0.0,,
+7,Chelsea,23,1,False,False,0.0,0.0,,
+7,Chelsea,24,1,False,False,0.0,0.0,,
+7,Chelsea,25,1,False,False,0.0,0.0,,
+7,Chelsea,26,1,False,False,0.0,0.0,,
+7,Chelsea,27,1,False,False,0.0,0.0,,
+7,Chelsea,28,1,False,False,0.0,0.0,,
+7,Chelsea,29,1,False,False,0.0,0.0,,
+7,Chelsea,30,1,False,False,0.0,0.0,,
+7,Chelsea,31,1,False,False,0.0,0.0,,
+7,Chelsea,32,1,False,False,0.0,0.0,,
+7,Chelsea,33,1,False,False,0.0,0.0,,
+7,Chelsea,34,1,False,False,0.0,0.0,,
+7,Chelsea,35,1,False,False,0.0,0.0,,
+7,Chelsea,36,1,False,False,0.0,0.0,,
+7,Chelsea,37,1,False,False,0.0,0.0,,
+7,Chelsea,38,1,False,False,0.0,0.0,,
+8,Crystal Palace,1,1,False,False,1.0,0.05,False,7.0
+8,Crystal Palace,2,1,False,False,1.0,0.05,True,16.0
+8,Crystal Palace,3,1,False,False,0.5,0.05,False,2.0
+8,Crystal Palace,4,1,False,False,1.0,0.05,True,17.0
+8,Crystal Palace,5,1,False,False,1.5,0.15,False,19.0
+8,Crystal Palace,6,1,False,False,1.5,0.15,True,12.0
+8,Crystal Palace,7,1,False,False,1.0,0.05,False,9.0
+8,Crystal Palace,8,1,False,False,1.0,0.05,True,4.0
+8,Crystal Palace,9,1,False,False,1.0,0.05,False,1.0
+8,Crystal Palace,10,1,False,False,1.0,0.05,True,5.0
+8,Crystal Palace,11,1,False,False,0.0,0.0,,
+8,Crystal Palace,12,1,False,False,0.0,0.0,,
+8,Crystal Palace,13,1,False,False,0.0,0.0,,
+8,Crystal Palace,14,1,False,False,0.0,0.0,,
+8,Crystal Palace,15,1,False,False,0.0,0.0,,
+8,Crystal Palace,16,1,False,False,0.0,0.0,,
+8,Crystal Palace,17,1,False,False,0.0,0.0,,
+8,Crystal Palace,18,1,False,False,0.0,0.0,,
+8,Crystal Palace,19,1,False,False,0.0,0.0,,
+8,Crystal Palace,20,1,False,False,0.0,0.0,,
+8,Crystal Palace,21,1,False,False,0.0,0.0,,
+8,Crystal Palace,22,1,False,False,0.0,0.0,,
+8,Crystal Palace,23,1,False,False,0.0,0.0,,
+8,Crystal Palace,24,1,False,False,0.0,0.0,,
+8,Crystal Palace,25,1,False,False,0.0,0.0,,
+8,Crystal Palace,26,1,False,False,0.0,0.0,,
+8,Crystal Palace,27,1,False,False,0.0,0.0,,
+8,Crystal Palace,28,1,False,False,0.0,0.0,,
+8,Crystal Palace,29,1,False,False,0.0,0.0,,
+8,Crystal Palace,30,1,False,False,0.0,0.0,,
+8,Crystal Palace,31,1,False,False,0.0,0.0,,
+8,Crystal Palace,32,1,False,False,0.0,0.0,,
+8,Crystal Palace,33,1,False,False,0.0,0.0,,
+8,Crystal Palace,34,1,False,False,0.0,0.0,,
+8,Crystal Palace,35,1,False,False,0.0,0.0,,
+8,Crystal Palace,36,1,False,False,0.0,0.0,,
+8,Crystal Palace,37,1,False,False,0.0,0.0,,
+8,Crystal Palace,38,1,False,False,0.0,0.0,,
+9,Everton,1,1,False,False,1.0,0.05,False,11.0
+9,Everton,2,1,False,False,1.5,0.25,True,6.0
+9,Everton,3,1,False,False,1.0,0.05,False,20.0
+9,Everton,4,1,False,False,1.0,0.05,True,2.0
+9,Everton,5,1,False,False,1.0,0.05,False,12.0
+9,Everton,6,1,False,False,1.0,0.05,True,19.0
+9,Everton,7,1,False,False,1.0,0.15000000000000002,True,8.0
+9,Everton,8,1,False,False,1.0,0.05,False,13.0
+9,Everton,9,1,False,False,1.0,0.05,True,18.0
+9,Everton,10,1,False,False,1.0,0.05,False,17.0
+9,Everton,11,1,False,False,0.0,0.0,,
+9,Everton,12,1,False,False,0.0,0.0,,
+9,Everton,13,1,False,False,0.0,0.0,,
+9,Everton,14,1,False,False,0.0,0.0,,
+9,Everton,15,1,False,False,0.0,0.0,,
+9,Everton,16,1,False,False,0.0,0.0,,
+9,Everton,17,1,False,False,0.0,0.0,,
+9,Everton,18,1,False,False,0.0,0.0,,
+9,Everton,19,1,False,False,0.0,0.0,,
+9,Everton,20,1,False,False,0.0,0.0,,
+9,Everton,21,1,False,False,0.0,0.0,,
+9,Everton,22,1,False,False,0.0,0.0,,
+9,Everton,23,1,False,False,0.0,0.0,,
+9,Everton,24,1,False,False,0.0,0.0,,
+9,Everton,25,1,False,False,0.0,0.0,,
+9,Everton,26,1,False,False,0.0,0.0,,
+9,Everton,27,1,False,False,0.0,0.0,,
+9,Everton,28,1,False,False,0.0,0.0,,
+9,Everton,29,1,False,False,0.0,0.0,,
+9,Everton,30,1,False,False,0.0,0.0,,
+9,Everton,31,1,False,False,0.0,0.0,,
+9,Everton,32,1,False,False,0.0,0.0,,
+9,Everton,33,1,False,False,0.0,0.0,,
+9,Everton,34,1,False,False,0.0,0.0,,
+9,Everton,35,1,False,False,0.0,0.0,,
+9,Everton,36,1,False,False,0.0,0.0,,
+9,Everton,37,1,False,False,0.0,0.0,,
+9,Everton,38,1,False,False,0.0,0.0,,
+10,Fulham,1,1,False,False,0.5,0.05,False,6.0
+10,Fulham,2,1,False,False,1.0,0.05,True,14.0
+10,Fulham,3,1,False,False,1.0,0.15000000000000002,False,7.0
+10,Fulham,4,1,False,False,0.5,0.05,True,11.0
+10,Fulham,5,1,False,False,1.0,0.05,True,5.0
+10,Fulham,6,1,False,False,1.5,0.15,False,2.0
+10,Fulham,7,1,False,False,1.0,0.05,False,4.0
+10,Fulham,8,1,False,False,1.0,0.05,True,1.0
+10,Fulham,9,1,False,False,1.0,0.05,False,15.0
+10,Fulham,10,1,False,False,1.0,0.05,True,20.0
+10,Fulham,11,1,False,False,0.0,0.0,,
+10,Fulham,12,1,False,False,0.0,0.0,,
+10,Fulham,13,1,False,False,0.0,0.0,,
+10,Fulham,14,1,False,False,0.0,0.0,,
+10,Fulham,15,1,False,False,0.0,0.0,,
+10,Fulham,16,1,False,False,0.0,0.0,,
+10,Fulham,17,1,False,False,0.0,0.0,,
+10,Fulham,18,1,False,False,0.0,0.0,,
+10,Fulham,19,1,False,False,0.0,0.0,,
+10,Fulham,20,1,False,False,0.0,0.0,,
+10,Fulham,21,1,False,False,0.0,0.0,,
+10,Fulham,22,1,False,False,0.0,0.0,,
+10,Fulham,23,1,False,False,0.0,0.0,,
+10,Fulham,24,1,False,False,0.0,0.0,,
+10,Fulham,25,1,False,False,0.0,0.0,,
+10,Fulham,26,1,False,False,0.0,0.0,,
+10,Fulham,27,1,False,False,0.0,0.0,,
+10,Fulham,28,1,False,False,0.0,0.0,,
+10,Fulham,29,1,False,False,0.0,0.0,,
+10,Fulham,30,1,False,False,0.0,0.0,,
+10,Fulham,31,1,False,False,0.0,0.0,,
+10,Fulham,32,1,False,False,0.0,0.0,,
+10,Fulham,33,1,False,False,0.0,0.0,,
+10,Fulham,34,1,False,False,0.0,0.0,,
+10,Fulham,35,1,False,False,0.0,0.0,,
+10,Fulham,36,1,False,False,0.0,0.0,,
+10,Fulham,37,1,False,False,0.0,0.0,,
+10,Fulham,38,1,False,False,0.0,0.0,,
+11,Leeds,1,1,False,False,1.0,0.05,True,9.0
+11,Leeds,2,1,False,False,1.5,0.25,False,1.0
+11,Leeds,3,1,False,False,1.0,0.05,True,15.0
+11,Leeds,4,1,False,False,1.0,0.05,False,10.0
+11,Leeds,5,1,False,False,1.5,0.15,False,20.0
+11,Leeds,6,1,False,False,1.5,0.15,True,4.0
+11,Leeds,7,1,False,False,1.0,0.05,True,18.0
+11,Leeds,8,1,False,False,1.0,0.05,False,3.0
+11,Leeds,9,1,False,False,1.0,0.05,True,19.0
+11,Leeds,10,1,False,False,1.0,0.05,False,6.0
+11,Leeds,11,1,False,False,0.0,0.0,,
+11,Leeds,12,1,False,False,0.0,0.0,,
+11,Leeds,13,1,False,False,0.0,0.0,,
+11,Leeds,14,1,False,False,0.0,0.0,,
+11,Leeds,15,1,False,False,0.0,0.0,,
+11,Leeds,16,1,False,False,0.0,0.0,,
+11,Leeds,17,1,False,False,0.0,0.0,,
+11,Leeds,18,1,False,False,0.0,0.0,,
+11,Leeds,19,1,False,False,0.0,0.0,,
+11,Leeds,20,1,False,False,0.0,0.0,,
+11,Leeds,21,1,False,False,0.0,0.0,,
+11,Leeds,22,1,False,False,0.0,0.0,,
+11,Leeds,23,1,False,False,0.0,0.0,,
+11,Leeds,24,1,False,False,0.0,0.0,,
+11,Leeds,25,1,False,False,0.0,0.0,,
+11,Leeds,26,1,False,False,0.0,0.0,,
+11,Leeds,27,1,False,False,0.0,0.0,,
+11,Leeds,28,1,False,False,0.0,0.0,,
+11,Leeds,29,1,False,False,0.0,0.0,,
+11,Leeds,30,1,False,False,0.0,0.0,,
+11,Leeds,31,1,False,False,0.0,0.0,,
+11,Leeds,32,1,False,False,0.0,0.0,,
+11,Leeds,33,1,False,False,0.0,0.0,,
+11,Leeds,34,1,False,False,0.0,0.0,,
+11,Leeds,35,1,False,False,0.0,0.0,,
+11,Leeds,36,1,False,False,0.0,0.0,,
+11,Leeds,37,1,False,False,0.0,0.0,,
+11,Leeds,38,1,False,False,0.0,0.0,,
+12,Liverpool,1,0,False,True,0.0,0.0,,
+12,Liverpool,2,1,False,False,1.0,0.05,False,15.0
+12,Liverpool,3,1,False,False,1.0,0.15000000000000002,True,1.0
+12,Liverpool,4,1,False,False,1.0,0.05,False,3.0
+12,Liverpool,5,1,False,False,1.0,0.15000000000000002,True,9.0
+12,Liverpool,6,1,False,False,1.0,0.05,False,8.0
+12,Liverpool,7,1,False,False,1.0,0.05,False,7.0
+12,Liverpool,8,1,False,False,1.0,0.05,True,14.0
+12,Liverpool,9,1,False,False,1.0,0.05,False,5.0
+12,Liverpool,10,1,False,False,1.0,0.05,True,2.0
+12,Liverpool,11,1,False,False,1.0,0.05,False,13.0
+12,Liverpool,12,1,False,False,0.0,0.0,,
+12,Liverpool,13,1,False,False,0.0,0.0,,
+12,Liverpool,14,1,False,False,0.0,0.0,,
+12,Liverpool,15,1,False,False,0.0,0.0,,
+12,Liverpool,16,1,False,False,0.0,0.0,,
+12,Liverpool,17,1,False,False,0.0,0.0,,
+12,Liverpool,18,1,False,False,0.0,0.0,,
+12,Liverpool,19,1,False,False,0.0,0.0,,
+12,Liverpool,20,1,False,False,0.0,0.0,,
+12,Liverpool,21,1,False,False,0.0,0.0,,
+12,Liverpool,22,1,False,False,0.0,0.0,,
+12,Liverpool,23,1,False,False,0.0,0.0,,
+12,Liverpool,24,1,False,False,0.0,0.0,,
+12,Liverpool,25,1,False,False,0.0,0.0,,
+12,Liverpool,26,1,False,False,0.0,0.0,,
+12,Liverpool,27,1,False,False,0.0,0.0,,
+12,Liverpool,28,1,False,False,0.0,0.0,,
+12,Liverpool,29,1,False,False,0.0,0.0,,
+12,Liverpool,30,1,False,False,0.0,0.0,,
+12,Liverpool,31,1,False,False,0.0,0.0,,
+12,Liverpool,32,1,False,False,0.0,0.0,,
+12,Liverpool,33,1,False,False,0.0,0.0,,
+12,Liverpool,34,1,False,False,0.0,0.0,,
+12,Liverpool,35,1,False,False,0.0,0.0,,
+12,Liverpool,36,1,False,False,0.0,0.0,,
+12,Liverpool,37,1,False,False,0.0,0.0,,
+12,Liverpool,38,1,False,False,0.0,0.0,,
+13,Man City,1,1,False,False,1.0,0.05,False,20.0
+13,Man City,2,1,False,False,1.0,0.05,True,18.0
+13,Man City,3,1,False,False,0.5,0.05,False,6.0
+13,Man City,4,1,False,False,1.0,0.05,True,14.0
+13,Man City,5,1,False,False,1.5,0.15,False,1.0
+13,Man City,6,1,False,False,1.5,0.25,True,3.0
+13,Man City,7,1,False,False,1.0,0.05,False,5.0
+13,Man City,8,1,False,False,1.0,0.05,True,9.0
+13,Man City,9,1,False,False,1.0,0.05,False,2.0
+13,Man City,10,1,False,False,1.0,0.05,True,4.0
+13,Man City,11,1,False,False,0.0,0.0,,
+13,Man City,12,1,False,False,0.0,0.0,,
+13,Man City,13,1,False,False,0.0,0.0,,
+13,Man City,14,1,False,False,0.0,0.0,,
+13,Man City,15,1,False,False,0.0,0.0,,
+13,Man City,16,1,False,False,0.0,0.0,,
+13,Man City,17,1,False,False,0.0,0.0,,
+13,Man City,18,1,False,False,0.0,0.0,,
+13,Man City,19,1,False,False,0.0,0.0,,
+13,Man City,20,1,False,False,0.0,0.0,,
+13,Man City,21,1,False,False,0.0,0.0,,
+13,Man City,22,1,False,False,0.0,0.0,,
+13,Man City,23,1,False,False,0.0,0.0,,
+13,Man City,24,1,False,False,0.0,0.0,,
+13,Man City,25,1,False,False,0.0,0.0,,
+13,Man City,26,1,False,False,0.0,0.0,,
+13,Man City,27,1,False,False,0.0,0.0,,
+13,Man City,28,1,False,False,0.0,0.0,,
+13,Man City,29,1,False,False,0.0,0.0,,
+13,Man City,30,1,False,False,0.0,0.0,,
+13,Man City,31,1,False,False,0.0,0.0,,
+13,Man City,32,1,False,False,0.0,0.0,,
+13,Man City,33,1,False,False,0.0,0.0,,
+13,Man City,34,1,False,False,0.0,0.0,,
+13,Man City,35,1,False,False,0.0,0.0,,
+13,Man City,36,1,False,False,0.0,0.0,,
+13,Man City,37,1,False,False,0.0,0.0,,
+13,Man City,38,1,False,False,0.0,0.0,,
+14,Man Utd,1,1,False,False,1.0,0.05,True,1.0
+14,Man Utd,2,1,False,False,1.5,0.15,False,10.0
+14,Man Utd,3,1,False,False,1.0,0.15000000000000002,True,3.0
+14,Man Utd,4,1,False,False,1.0,0.05,False,13.0
+14,Man Utd,5,1,False,False,1.5,0.15,True,7.0
+14,Man Utd,6,1,False,False,1.0,0.05,False,5.0
+14,Man Utd,7,1,False,False,0.5,0.05,True,17.0
+14,Man Utd,8,1,False,False,1.0,0.05,False,12.0
+14,Man Utd,9,1,False,False,1.0,0.05,True,6.0
+14,Man Utd,10,1,False,False,1.0,0.05,False,16.0
+14,Man Utd,11,1,False,False,0.0,0.0,,
+14,Man Utd,12,1,False,False,0.0,0.0,,
+14,Man Utd,13,1,False,False,0.0,0.0,,
+14,Man Utd,14,1,False,False,0.0,0.0,,
+14,Man Utd,15,1,False,False,0.0,0.0,,
+14,Man Utd,16,1,False,False,0.0,0.0,,
+14,Man Utd,17,1,False,False,0.0,0.0,,
+14,Man Utd,18,1,False,False,0.0,0.0,,
+14,Man Utd,19,1,False,False,0.0,0.0,,
+14,Man Utd,20,1,False,False,0.0,0.0,,
+14,Man Utd,21,1,False,False,0.0,0.0,,
+14,Man Utd,22,1,False,False,0.0,0.0,,
+14,Man Utd,23,1,False,False,0.0,0.0,,
+14,Man Utd,24,1,False,False,0.0,0.0,,
+14,Man Utd,25,1,False,False,0.0,0.0,,
+14,Man Utd,26,1,False,False,0.0,0.0,,
+14,Man Utd,27,1,False,False,0.0,0.0,,
+14,Man Utd,28,1,False,False,0.0,0.0,,
+14,Man Utd,29,1,False,False,0.0,0.0,,
+14,Man Utd,30,1,False,False,0.0,0.0,,
+14,Man Utd,31,1,False,False,0.0,0.0,,
+14,Man Utd,32,1,False,False,0.0,0.0,,
+14,Man Utd,33,1,False,False,0.0,0.0,,
+14,Man Utd,34,1,False,False,0.0,0.0,,
+14,Man Utd,35,1,False,False,0.0,0.0,,
+14,Man Utd,36,1,False,False,0.0,0.0,,
+14,Man Utd,37,1,False,False,0.0,0.0,,
+14,Man Utd,38,1,False,False,0.0,0.0,,
+15,Newcastle,1,1,False,False,0.5,0.05,False,2.0
+15,Newcastle,2,1,False,False,1.0,0.05,True,12.0
+15,Newcastle,3,1,False,False,1.0,0.15000000000000002,False,11.0
+15,Newcastle,4,1,False,False,1.0,0.05,True,20.0
+15,Newcastle,5,1,False,False,1.0,0.05,False,4.0
+15,Newcastle,6,1,False,False,1.0,0.05,True,1.0
+15,Newcastle,7,1,False,False,1.0,0.15000000000000002,True,16.0
+15,Newcastle,8,1,False,False,1.0,0.05,False,6.0
+15,Newcastle,9,1,False,False,1.0,0.05,True,10.0
+15,Newcastle,10,1,False,False,1.0,0.05,False,19.0
+15,Newcastle,11,1,False,False,0.0,0.0,,
+15,Newcastle,12,1,False,False,0.0,0.0,,
+15,Newcastle,13,1,False,False,0.0,0.0,,
+15,Newcastle,14,1,False,False,0.0,0.0,,
+15,Newcastle,15,1,False,False,0.0,0.0,,
+15,Newcastle,16,1,False,False,0.0,0.0,,
+15,Newcastle,17,1,False,False,0.0,0.0,,
+15,Newcastle,18,1,False,False,0.0,0.0,,
+15,Newcastle,19,1,False,False,0.0,0.0,,
+15,Newcastle,20,1,False,False,0.0,0.0,,
+15,Newcastle,21,1,False,False,0.0,0.0,,
+15,Newcastle,22,1,False,False,0.0,0.0,,
+15,Newcastle,23,1,False,False,0.0,0.0,,
+15,Newcastle,24,1,False,False,0.0,0.0,,
+15,Newcastle,25,1,False,False,0.0,0.0,,
+15,Newcastle,26,1,False,False,0.0,0.0,,
+15,Newcastle,27,1,False,False,0.0,0.0,,
+15,Newcastle,28,1,False,False,0.0,0.0,,
+15,Newcastle,29,1,False,False,0.0,0.0,,
+15,Newcastle,30,1,False,False,0.0,0.0,,
+15,Newcastle,31,1,False,False,0.0,0.0,,
+15,Newcastle,32,1,False,False,0.0,0.0,,
+15,Newcastle,33,1,False,False,0.0,0.0,,
+15,Newcastle,34,1,False,False,0.0,0.0,,
+15,Newcastle,35,1,False,False,0.0,0.0,,
+15,Newcastle,36,1,False,False,0.0,0.0,,
+15,Newcastle,37,1,False,False,0.0,0.0,,
+15,Newcastle,38,1,False,False,0.0,0.0,,
+16,Nott'm Forest,1,1,False,False,1.0,0.05,True,5.0
+16,Nott'm Forest,2,1,False,False,1.5,0.15,False,8.0
+16,Nott'm Forest,3,1,False,False,1.0,0.05,True,19.0
+16,Nott'm Forest,4,1,False,False,0.5,0.05,False,1.0
+16,Nott'm Forest,5,1,False,False,0.5,0.05,False,3.0
+16,Nott'm Forest,6,1,False,False,1.0,0.05,True,17.0
+16,Nott'm Forest,7,1,False,False,1.0,0.05,False,15.0
+16,Nott'm Forest,8,1,False,False,1.0,0.05,True,7.0
+16,Nott'm Forest,9,1,False,False,1.0,0.05,False,4.0
+16,Nott'm Forest,10,1,False,False,1.0,0.05,True,14.0
+16,Nott'm Forest,11,1,False,False,0.0,0.0,,
+16,Nott'm Forest,12,1,False,False,0.0,0.0,,
+16,Nott'm Forest,13,1,False,False,0.0,0.0,,
+16,Nott'm Forest,14,1,False,False,0.0,0.0,,
+16,Nott'm Forest,15,1,False,False,0.0,0.0,,
+16,Nott'm Forest,16,1,False,False,0.0,0.0,,
+16,Nott'm Forest,17,1,False,False,0.0,0.0,,
+16,Nott'm Forest,18,1,False,False,0.0,0.0,,
+16,Nott'm Forest,19,1,False,False,0.0,0.0,,
+16,Nott'm Forest,20,1,False,False,0.0,0.0,,
+16,Nott'm Forest,21,1,False,False,0.0,0.0,,
+16,Nott'm Forest,22,1,False,False,0.0,0.0,,
+16,Nott'm Forest,23,1,False,False,0.0,0.0,,
+16,Nott'm Forest,24,1,False,False,0.0,0.0,,
+16,Nott'm Forest,25,1,False,False,0.0,0.0,,
+16,Nott'm Forest,26,1,False,False,0.0,0.0,,
+16,Nott'm Forest,27,1,False,False,0.0,0.0,,
+16,Nott'm Forest,28,1,False,False,0.0,0.0,,
+16,Nott'm Forest,29,1,False,False,0.0,0.0,,
+16,Nott'm Forest,30,1,False,False,0.0,0.0,,
+16,Nott'm Forest,31,1,False,False,0.0,0.0,,
+16,Nott'm Forest,32,1,False,False,0.0,0.0,,
+16,Nott'm Forest,33,1,False,False,0.0,0.0,,
+16,Nott'm Forest,34,1,False,False,0.0,0.0,,
+16,Nott'm Forest,35,1,False,False,0.0,0.0,,
+16,Nott'm Forest,36,1,False,False,0.0,0.0,,
+16,Nott'm Forest,37,1,False,False,0.0,0.0,,
+16,Nott'm Forest,38,1,False,False,0.0,0.0,,
+17,Sunderland,1,1,False,False,1.0,0.05,True,19.0
+17,Sunderland,2,1,False,False,1.5,0.15,False,3.0
+17,Sunderland,3,1,False,False,1.0,0.05,True,5.0
+17,Sunderland,4,1,False,False,0.5,0.05,False,8.0
+17,Sunderland,5,1,False,False,1.0,0.05,True,2.0
+17,Sunderland,6,1,False,False,1.5,0.15,False,16.0
+17,Sunderland,7,1,False,False,1.0,0.05,False,14.0
+17,Sunderland,8,1,False,False,1.0,0.05,True,20.0
+17,Sunderland,9,1,False,False,1.0,0.05,False,7.0
+17,Sunderland,10,1,False,False,1.0,0.05,True,9.0
+17,Sunderland,11,1,False,False,0.0,0.0,,
+17,Sunderland,12,1,False,False,0.0,0.0,,
+17,Sunderland,13,1,False,False,0.0,0.0,,
+17,Sunderland,14,1,False,False,0.0,0.0,,
+17,Sunderland,15,1,False,False,0.0,0.0,,
+17,Sunderland,16,1,False,False,0.0,0.0,,
+17,Sunderland,17,1,False,False,0.0,0.0,,
+17,Sunderland,18,1,False,False,0.0,0.0,,
+17,Sunderland,19,1,False,False,0.0,0.0,,
+17,Sunderland,20,1,False,False,0.0,0.0,,
+17,Sunderland,21,1,False,False,0.0,0.0,,
+17,Sunderland,22,1,False,False,0.0,0.0,,
+17,Sunderland,23,1,False,False,0.0,0.0,,
+17,Sunderland,24,1,False,False,0.0,0.0,,
+17,Sunderland,25,1,False,False,0.0,0.0,,
+17,Sunderland,26,1,False,False,0.0,0.0,,
+17,Sunderland,27,1,False,False,0.0,0.0,,
+17,Sunderland,28,1,False,False,0.0,0.0,,
+17,Sunderland,29,1,False,False,0.0,0.0,,
+17,Sunderland,30,1,False,False,0.0,0.0,,
+17,Sunderland,31,1,False,False,0.0,0.0,,
+17,Sunderland,32,1,False,False,0.0,0.0,,
+17,Sunderland,33,1,False,False,0.0,0.0,,
+17,Sunderland,34,1,False,False,0.0,0.0,,
+17,Sunderland,35,1,False,False,0.0,0.0,,
+17,Sunderland,36,1,False,False,0.0,0.0,,
+17,Sunderland,37,1,False,False,0.0,0.0,,
+17,Sunderland,38,1,False,False,0.0,0.0,,
+18,Spurs,1,1,False,False,1.0,0.05,True,3.0
+18,Spurs,2,1,False,False,1.0,0.05,False,13.0
+18,Spurs,3,1,False,False,0.5,0.05,True,4.0
+18,Spurs,4,1,False,False,1.0,0.05,False,19.0
+18,Spurs,5,1,False,False,1.0,0.05,False,6.0
+18,Spurs,6,1,False,False,1.0,0.05,True,20.0
+18,Spurs,7,1,False,False,1.0,0.05,False,11.0
+18,Spurs,8,1,False,False,1.0,0.05,True,2.0
+18,Spurs,9,1,False,False,1.0,0.05,False,9.0
+18,Spurs,10,1,False,False,1.0,0.05,True,7.0
+18,Spurs,11,1,False,False,0.0,0.0,,
+18,Spurs,12,1,False,False,0.0,0.0,,
+18,Spurs,13,1,False,False,0.0,0.0,,
+18,Spurs,14,1,False,False,0.0,0.0,,
+18,Spurs,15,1,False,False,0.0,0.0,,
+18,Spurs,16,1,False,False,0.0,0.0,,
+18,Spurs,17,1,False,False,0.0,0.0,,
+18,Spurs,18,1,False,False,0.0,0.0,,
+18,Spurs,19,1,False,False,0.0,0.0,,
+18,Spurs,20,1,False,False,0.0,0.0,,
+18,Spurs,21,1,False,False,0.0,0.0,,
+18,Spurs,22,1,False,False,0.0,0.0,,
+18,Spurs,23,1,False,False,0.0,0.0,,
+18,Spurs,24,1,False,False,0.0,0.0,,
+18,Spurs,25,1,False,False,0.0,0.0,,
+18,Spurs,26,1,False,False,0.0,0.0,,
+18,Spurs,27,1,False,False,0.0,0.0,,
+18,Spurs,28,1,False,False,0.0,0.0,,
+18,Spurs,29,1,False,False,0.0,0.0,,
+18,Spurs,30,1,False,False,0.0,0.0,,
+18,Spurs,31,1,False,False,0.0,0.0,,
+18,Spurs,32,1,False,False,0.0,0.0,,
+18,Spurs,33,1,False,False,0.0,0.0,,
+18,Spurs,34,1,False,False,0.0,0.0,,
+18,Spurs,35,1,False,False,0.0,0.0,,
+18,Spurs,36,1,False,False,0.0,0.0,,
+18,Spurs,37,1,False,False,0.0,0.0,,
+18,Spurs,38,1,False,False,0.0,0.0,,
+19,West Ham,1,1,False,False,1.0,0.05,False,17.0
+19,West Ham,2,1,False,False,1.0,0.05,True,7.0
+19,West Ham,3,1,False,False,0.5,0.05,False,16.0
+19,West Ham,4,1,False,False,1.0,0.05,True,18.0
+19,West Ham,5,1,False,False,1.0,0.05,True,8.0
+19,West Ham,6,1,False,False,1.0,0.05,False,9.0
+19,West Ham,7,1,False,False,1.0,0.15000000000000002,False,1.0
+19,West Ham,8,1,False,False,1.0,0.05,True,5.0
+19,West Ham,9,1,False,False,1.0,0.05,False,11.0
+19,West Ham,10,1,False,False,1.0,0.05,True,15.0
+19,West Ham,11,1,False,False,0.0,0.0,,
+19,West Ham,12,1,False,False,0.0,0.0,,
+19,West Ham,13,1,False,False,0.0,0.0,,
+19,West Ham,14,1,False,False,0.0,0.0,,
+19,West Ham,15,1,False,False,0.0,0.0,,
+19,West Ham,16,1,False,False,0.0,0.0,,
+19,West Ham,17,1,False,False,0.0,0.0,,
+19,West Ham,18,1,False,False,0.0,0.0,,
+19,West Ham,19,1,False,False,0.0,0.0,,
+19,West Ham,20,1,False,False,0.0,0.0,,
+19,West Ham,21,1,False,False,0.0,0.0,,
+19,West Ham,22,1,False,False,0.0,0.0,,
+19,West Ham,23,1,False,False,0.0,0.0,,
+19,West Ham,24,1,False,False,0.0,0.0,,
+19,West Ham,25,1,False,False,0.0,0.0,,
+19,West Ham,26,1,False,False,0.0,0.0,,
+19,West Ham,27,1,False,False,0.0,0.0,,
+19,West Ham,28,1,False,False,0.0,0.0,,
+19,West Ham,29,1,False,False,0.0,0.0,,
+19,West Ham,30,1,False,False,0.0,0.0,,
+19,West Ham,31,1,False,False,0.0,0.0,,
+19,West Ham,32,1,False,False,0.0,0.0,,
+19,West Ham,33,1,False,False,0.0,0.0,,
+19,West Ham,34,1,False,False,0.0,0.0,,
+19,West Ham,35,1,False,False,0.0,0.0,,
+19,West Ham,36,1,False,False,0.0,0.0,,
+19,West Ham,37,1,False,False,0.0,0.0,,
+19,West Ham,38,1,False,False,0.0,0.0,,
+20,Wolves,1,1,False,False,1.0,0.05,True,13.0
+20,Wolves,2,1,False,False,1.5,0.15,False,4.0
+20,Wolves,3,1,False,False,1.0,0.05,True,9.0
+20,Wolves,4,1,False,False,1.0,0.05,False,15.0
+20,Wolves,5,1,False,False,1.0,0.05,True,11.0
+20,Wolves,6,1,False,False,1.0,0.05,False,18.0
+20,Wolves,7,1,False,False,1.0,0.05,True,6.0
+20,Wolves,8,1,False,False,1.0,0.05,False,17.0
+20,Wolves,9,1,False,False,1.0,0.05,True,3.0
+20,Wolves,10,1,False,False,1.0,0.05,False,10.0
+20,Wolves,11,1,False,False,0.0,0.0,,
+20,Wolves,12,1,False,False,0.0,0.0,,
+20,Wolves,13,1,False,False,0.0,0.0,,
+20,Wolves,14,1,False,False,0.0,0.0,,
+20,Wolves,15,1,False,False,0.0,0.0,,
+20,Wolves,16,1,False,False,0.0,0.0,,
+20,Wolves,17,1,False,False,0.0,0.0,,
+20,Wolves,18,1,False,False,0.0,0.0,,
+20,Wolves,19,1,False,False,0.0,0.0,,
+20,Wolves,20,1,False,False,0.0,0.0,,
+20,Wolves,21,1,False,False,0.0,0.0,,
+20,Wolves,22,1,False,False,0.0,0.0,,
+20,Wolves,23,1,False,False,0.0,0.0,,
+20,Wolves,24,1,False,False,0.0,0.0,,
+20,Wolves,25,1,False,False,0.0,0.0,,
+20,Wolves,26,1,False,False,0.0,0.0,,
+20,Wolves,27,1,False,False,0.0,0.0,,
+20,Wolves,28,1,False,False,0.0,0.0,,
+20,Wolves,29,1,False,False,0.0,0.0,,
+20,Wolves,30,1,False,False,0.0,0.0,,
+20,Wolves,31,1,False,False,0.0,0.0,,
+20,Wolves,32,1,False,False,0.0,0.0,,
+20,Wolves,33,1,False,False,0.0,0.0,,
+20,Wolves,34,1,False,False,0.0,0.0,,
+20,Wolves,35,1,False,False,0.0,0.0,,
+20,Wolves,36,1,False,False,0.0,0.0,,
+20,Wolves,37,1,False,False,0.0,0.0,,
+20,Wolves,38,1,False,False,0.0,0.0,,

@@ -1,0 +1,132 @@
+{
+  "model_weights": {
+    "base_points_weight": 0.4,
+    "form_weight": 0.25,
+    "fixture_weight": 0.2,
+    "minutes_weight": 0.15,
+    "set_piece_bonus": 0.5,
+    "penalty_bonus": 1.0,
+    "home_advantage": 0.3,
+    "rotation_risk": -0.2
+  },
+  "backtest_results": {
+    "mae": 1.9944773521892163,
+    "rmse": 2.943667672070053,
+    "mape": 90.18465696791968,
+    "correlation": 0.3654666192216759,
+    "n_players": 118
+  },
+  "top_10_xpts": [
+    {
+      "player_id": 36,
+      "name": "Matty Cash",
+      "position": "DEF",
+      "team_short": "AVL",
+      "current_price": 4.5,
+      "xPts_next_gw": 8.683333333333334,
+      "xPts_next_6gw": 40.07692307692307,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 40,
+      "name": "Tyrone Mings",
+      "position": "DEF",
+      "team_short": "AVL",
+      "current_price": 4.5,
+      "xPts_next_gw": 8.683333333333334,
+      "xPts_next_6gw": 40.07692307692307,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 37,
+      "name": "Lucas Digne",
+      "position": "DEF",
+      "team_short": "AVL",
+      "current_price": 4.5,
+      "xPts_next_gw": 8.553333333333335,
+      "xPts_next_6gw": 39.47692307692308,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 38,
+      "name": "Ezri Konsa Ngoyo",
+      "position": "DEF",
+      "team_short": "AVL",
+      "current_price": 4.5,
+      "xPts_next_gw": 6.343162393162393,
+      "xPts_next_6gw": 29.276134122287964,
+      "predicted_minutes": 65,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 59,
+      "name": "Amadou Onana",
+      "position": "MID",
+      "team_short": "AVL",
+      "current_price": 5.0,
+      "xPts_next_gw": 4.523333333333333,
+      "xPts_next_6gw": 20.876923076923077,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 47,
+      "name": "Morgan Rogers",
+      "position": "MID",
+      "team_short": "AVL",
+      "current_price": 7.0,
+      "xPts_next_gw": 4.003333333333333,
+      "xPts_next_6gw": 18.47692307692307,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 48,
+      "name": "Youri Tielemans",
+      "position": "MID",
+      "team_short": "AVL",
+      "current_price": 6.0,
+      "xPts_next_gw": 3.916666666666666,
+      "xPts_next_6gw": 18.076923076923073,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 54,
+      "name": "John McGinn",
+      "position": "MID",
+      "team_short": "AVL",
+      "current_price": 5.5,
+      "xPts_next_gw": 3.887777777777778,
+      "xPts_next_6gw": 17.943589743589744,
+      "predicted_minutes": 83,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 58,
+      "name": "Boubacar Kamara",
+      "position": "MID",
+      "team_short": "AVL",
+      "current_price": 5.0,
+      "xPts_next_gw": 3.7199999999999998,
+      "xPts_next_6gw": 17.16923076923077,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    },
+    {
+      "player_id": 33,
+      "name": "Marco Bizot",
+      "position": "GKP",
+      "team_short": "AVL",
+      "current_price": 4.5,
+      "xPts_next_gw": 3.6566666666666667,
+      "xPts_next_6gw": 16.876923076923077,
+      "predicted_minutes": 90,
+      "fixture_adjustment": 1.3
+    }
+  ],
+  "model_formula": "xPts_next_gw = (predicted_minutes / 90) \u00d7 base_points_per_90 \u00d7 fixture_adjustment + bonuses + adjustments\n        \n        Where:\n        - base_points_per_90 = 2 + attacking_points_per_90 + defensive_points_per_90 + bonus_points_per_90\n        - attacking_points_per_90 = (goals_per_90 \u00d7 position_goal_value) + (assists_per_90 \u00d7 3)\n        - defensive_points_per_90 = clean_sheet_points + save_points - conceded_penalty\n        - fixture_adjustment = difficulty_multiplier + home_advantage\n        - bonuses = set_piece_bonus + form_adjustment\n        - adjustments = risk_adjustment (cards, rotation)"
+}
