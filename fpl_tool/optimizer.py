@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Environment-aware default paths
-DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "/home/ubuntu/data")
+DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "./data")
 
 @dataclass
 class OptimizationResult:

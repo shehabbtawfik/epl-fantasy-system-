@@ -1,258 +1,193 @@
-**Fantasy Premier League Optimization & Recommendation System**
+# ⚽ FPL Optimizer — Live Fantasy Premier League Dashboard
 
-A production-ready Python package that provides comprehensive FPL optimization, recommendations, and analysis tools built on top of Phase 1's advanced ML predictions.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B)](https://fpl-optimizer.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
-## 🚀 Features
+> **A production-grade FPL tool that fetches live player data from the official Premier League API and runs an Integer Linear Programming optimizer to build the highest-scoring squad possible — fully compliant with all FPL rules.**
 
-### Core Optimization Engine
-- **FPL Rules-Compliant Optimizer**: Integer Linear Programming using PuLP
-- **Complete Rule Enforcement**: 15-man squad, ≤3 per club, valid formations, £100m budget
-- **Multiple Strategies**: Balanced, Premium, Value, and Differential optimization
-- **Captain Selection**: Automatic captain and vice-captain optimization
+---
 
-### Comprehensive Recommendations
-- **Optimal Squad Generation**: Multiple strategy-based squads
-- **Positional Watchlists**: Top 15 GK, 25 DEF, 25 MID, 20 FWD
-- **Top 50 Overall Rankings**: Complete player rankings with photos
-- **Differential Analysis**: Low ownership, high potential players
-- **Budget Enablers**: Cheap options to free up funds
-- **Captaincy Recommendations**: Premium and safe captain options
+## 🚀 Live Demo
 
-### Production Tools
-- **CLI Interface**: Complete command-line tools using Typer
-- **Streamlit Dashboard**: Interactive web interface
-- **CSV Export**: All recommendations exportable to CSV
-- **Validation System**: Complete FPL rules compliance checking
-- **Comprehensive Testing**: Full pytest test suite
+**[→ Open the live app](https://fpl-optimizer.streamlit.app)**
 
-## 📦 Installation
+The demo pulls **real-time player data** directly from `fantasy.premierleague.com` — no CSV files, no manual updates. Every squad it builds is valid under FPL rules.
+
+---
+
+## What This Project Demonstrates
+
+| Capability | What It Shows |
+|---|---|
+| **Integer Linear Programming** | PuLP/CBC solver building optimal squads from 700+ players under hard constraints |
+| **Live API integration** | Real-time data from the official FPL API, cached and refreshed every 5 minutes |
+| **Multiple optimization strategies** | Balanced, Premium, Value, Differential, Form — each tuning the objective function differently |
+| **FPL rules enforcement** | 15-man squad, ≤3 per club, valid formations, £100m budget — all as LP constraints |
+| **Data engineering pipeline** | ML-based expected-points modeling (xPts) built on 3 seasons of historical data |
+| **Interactive dashboard** | Streamlit app with squad optimizer, player analysis, watchlists, and transfer trends |
+
+---
+
+## Features
+
+### 🎯 Squad Optimizer
+- ILP solver (PuLP + CBC) finds the mathematically optimal squad
+- 5 strategies: **Balanced** (xPts), **Premium** (total points), **Value** (xPts/£), **Differential** (form), **Form** (recent)
+- Configurable budget (£90–100m) and max players per club (1–3)
+- Automatic captain & vice-captain selection
+- CSV export of any generated squad
+
+### 📊 Player Analysis
+- Interactive scatter: Price vs xPts for all 700+ players
+- Filter by position, price range, team
+- Sort by any metric: xPts, form, total points, value score, ownership
+
+### 📋 Positional Watchlists
+- Top 15 GK, 25 DEF, 25 MID, 20 FWD ranked by expected points
+- Downloadable CSVs for each position
+
+### 🏆 Top 50 Rankings
+- Overall rankings with bar chart visualization
+- Filter by position, adjustable N
+
+### 🔄 Transfer Trends
+- Most transferred in/out this gameweek
+- Net transfer gain chart to spot the herd moves
+
+---
+
+## Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/shehabbtawfik/epl-fantasy-system-.git
+cd epl-fantasy-system-
+
 # Install dependencies
 pip install -r requirements.txt
 
-# Verify installation
-python -m fpl_tool.cli version
+# Launch the dashboard (fetches live data automatically)
+streamlit run streamlit_app.py
 ```
 
-## 🎯 Quick Start
+Open http://localhost:8501 — no API keys, no data files needed.
 
-### 1. Command Line Interface
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────┐
+│           FPL Official API                  │
+│   fantasy.premierleague.com/api/            │
+│   bootstrap-static/ (700+ players, live)    │
+└──────────────────┬──────────────────────────┘
+                   │ requests + 5-min cache
+┌──────────────────▼──────────────────────────┐
+│           Data Layer (pandas)               │
+│  Player stats · Prices · xPts · Form        │
+│  Ownership · Transfer deltas · Fitness      │
+└──────────────────┬──────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────┐
+│        ILP Optimizer (PuLP/CBC)             │
+│  Objective: maximise Σ score(player)        │
+│  Constraints:                               │
+│   · Squad = 15 players                      │
+│   · 2 GK, 5 DEF, 5 MID, 3 FWD              │
+│   · ≤ 3 players per club                   │
+│   · Total cost ≤ budget                     │
+└──────────────────┬──────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────┐
+│         Streamlit Dashboard                 │
+│  Home · Optimizer · Analysis ·              │
+│  Watchlists · Top 50 · Transfers            │
+└─────────────────────────────────────────────┘
+```
+
+### ML Pipeline (Phase 1 — in `fpl_tool/`)
+
+The `fpl_tool` package contains a full ML-based xPts engine used for offline analysis:
+
+- **Ensemble model**: Random Forest + Gradient Boosting + Ridge regression
+- **25+ features**: Form, fixture difficulty, home/away, minutes modelling, rotation risk, DGW/BGW detection
+- **Historical data**: 3 seasons of FPL data with engineered features
+- **Outputs**: `fpl_xpts_predictions_enhanced.csv` used by the `FPLRecommender` class
+
+The live Streamlit app uses FPL's own `ep_next` field as the xPts signal (always current), while the ML pipeline provides deeper analysis when run locally with historical data.
+
+---
+
+## Project Structure
+
+```
+epl-fantasy-system-/
+├── streamlit_app.py          # ✨ Main live dashboard (Streamlit Cloud ready)
+├── requirements.txt          # Dependencies
+├── .streamlit/
+│   └── config.toml           # Dark theme + server config
+│
+├── fpl_tool/                 # ML-powered recommendation engine
+│   ├── optimizer.py          # ILP optimization engine
+│   ├── recommender.py        # Full recommendation system
+│   ├── validator.py          # FPL rules compliance checker
+│   ├── cli.py                # Typer CLI interface
+│   └── app_streamlit.py      # Legacy Streamlit app (uses local CSV data)
+│
+├── data/                     # Sample data & analysis outputs
+├── models/                   # Trained ML models (.pkl)
+├── output/                   # Pre-computed squad recommendations
+└── tests/                    # pytest test suite
+```
+
+---
+
+## CLI Usage (with local ML data)
 
 ```bash
 # Build/update dataset
 python -m fpl_tool.cli build-dataset --seasons LAST3 --current
 
-# Generate projections
+# Generate xPts projections
 python -m fpl_tool.cli project --gw CURRENT --horizon 6
 
-# Optimize squad
+# Optimize squad from local predictions
 python -m fpl_tool.cli optimize --budget 100.0 --strategy balanced
 
-# Complete recommendations
+# Full gameweek recommendations
 python -m fpl_tool.cli recommend-gw --gw CURRENT --export output/recs.csv
 
-# Validate squad
+# Validate a squad CSV
 python -m fpl_tool.cli validate-squad squad.csv
 ```
 
-### 2. Python API
+---
 
-```python
-from fpl_tool import FPLOptimizer, FPLRecommender, FPLValidator
+## Deploying to Streamlit Community Cloud
 
-# Optimize squad
-optimizer = FPLOptimizer()
-result = optimizer.optimize_squad(budget=100.0, strategy="balanced")
-
-# Generate recommendations
-recommender = FPLRecommender()
-recommendations = recommender.generate_complete_recommendations(gameweek=1)
-
-# Validate compliance
-validator = FPLValidator()
-is_valid, errors = validator.validate_squad(squad)
-```
-
-### 3. Streamlit Dashboard
-
-```bash
-streamlit run fpl_tool/app_streamlit.py
-```
-
-## 📊 Output Examples
-
-### Optimal Squad (Balanced Strategy)
-```
-Formation: 1-4-4-2
-Total Cost: £97.0m
-Expected Points: 31.3
-Captain: Virgil van Dijk
-
-Starting XI:
-GKP: David Raya (Arsenal) - £5.5m
-DEF: Virgil van Dijk (Liverpool) - £6.0m
-DEF: William Saliba (Arsenal) - £6.0m
-...
-```
-
-### Top 50 Overall Rankings
-| Rank | Player | Position | Team | Price | xPts | Ownership | Photo |
-|------|--------|----------|------|-------|------|-----------|-------|
-| 1 | Virgil van Dijk | DEF | LIV | £6.0m | 3.2 | 15.2% | 🖼️ |
-| 2 | Mohamed Salah | MID | LIV | £13.0m | 3.1 | 45.8% | 🖼️ |
-| ... | ... | ... | ... | ... | ... | ... | ... |
-
-### Watchlists by Position
-- **Goalkeepers (15)**: Top GK options with clean sheet probabilities
-- **Defenders (25)**: Best defensive assets with attacking potential  
-- **Midfielders (25)**: High-scoring midfield options across price ranges
-- **Forwards (20)**: Premium and budget forward options
-
-## 🏗️ Architecture
-
-```
-fpl_tool/
-├── __init__.py          # Package initialization
-├── optimizer.py         # ILP optimization engine
-├── recommender.py       # Complete recommendation system
-├── validator.py         # FPL rules compliance checker
-├── cli.py              # Typer-based CLI interface
-└── app_streamlit.py    # Interactive dashboard
-
-tests/
-├── test_optimizer.py   # Optimizer test suite
-├── test_recommender.py # Recommender test suite
-├── test_validator.py   # Validator test suite
-└── test_cli.py        # CLI test suite
-```
-
-## 🔧 Configuration
-
-### Data Sources
-- **Predictions**: `/home/ubuntu/data/fpl_xpts_predictions_enhanced.csv`
-- **Master Data**: `/home/ubuntu/data/fpl_master_2025-26.csv`
-- **Output**: `/home/ubuntu/output/`
-
-### Optimization Parameters
-- **Budget**: £100.0m (configurable)
-- **Max per club**: 3 players (FPL rule)
-- **Squad size**: 15 players (2 GK, 5 DEF, 5 MID, 3 FWD)
-- **Starting XI**: 11 players in valid formation
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-python -m pytest tests/ -v
-
-# Run specific test suite
-python -m pytest tests/test_optimizer.py -v
-
-# Run with coverage
-python -m pytest tests/ --cov=fpl_tool --cov-report=html
-```
-
-## 📈 Performance
-
-- **Optimization Speed**: ~2-5 seconds for 687 players
-- **Memory Usage**: ~50MB for complete dataset
-- **Accuracy**: 100% FPL rules compliance
-- **Scalability**: Handles 1000+ players efficiently
-
-## 🎮 Demo
-
-Run the complete demonstration:
-
-```bash
-python demo_fpl_tool.py
-```
-
-This will test all components and generate sample outputs.
-
-## 📋 CLI Commands Reference
-
-### `build-dataset`
-Build and update FPL dataset
-```bash
-python -m fpl_tool.cli build-dataset [OPTIONS]
-```
-
-### `project`
-Generate expected points projections
-```bash
-python -m fpl_tool.cli project [OPTIONS]
-```
-
-### `optimize`
-Optimize FPL squad under constraints
-```bash
-python -m fpl_tool.cli optimize [OPTIONS]
-```
-
-### `recommend-gw`
-Generate complete gameweek recommendations
-```bash
-python -m fpl_tool.cli recommend-gw [OPTIONS]
-```
-
-### `validate-squad`
-Validate squad compliance with FPL rules
-```bash
-python -m fpl_tool.cli validate-squad SQUAD_FILE [OPTIONS]
-```
-
-## 🔍 Validation Rules
-
-The system enforces all official FPL rules:
-
-1. **Squad Structure**: Exactly 15 players (2 GK, 5 DEF, 5 MID, 3 FWD)
-2. **Club Limits**: Maximum 3 players per club
-3. **Budget Constraint**: Total cost ≤ £100.0m
-4. **Starting XI**: Valid formation (1 GK, 3-5 DEF, 3-5 MID, 1-3 FWD)
-5. **Captaincy**: Captain and vice-captain in starting XI, different players
-6. **Player Status**: Only available players (status = 'a')
-
-## 🚀 Weekly Workflow
-
-1. **Update Data**: `python -m fpl_tool.cli build-dataset --current`
-2. **Generate Projections**: `python -m fpl_tool.cli project --gw CURRENT`
-3. **Get Recommendations**: `python -m fpl_tool.cli recommend-gw --gw CURRENT`
-4. **Analyze Options**: Use Streamlit dashboard for interactive analysis
-5. **Validate Transfers**: `python -m fpl_tool.cli validate-squad new_squad.csv`
-
-## 📊 Integration with Phase 1
-
-Phase 2 builds directly on Phase 1's outputs:
-- **ML Predictions**: Uses `expected_points_ensemble` from enhanced models
-- **Feature Engineering**: Leverages all 25+ engineered features
-- **Fixture Analysis**: Incorporates DGW/BGW detection
-- **Minutes Modeling**: Uses predicted minutes for rotation risk
-- **Team Form**: Includes team strength metrics
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Run tests (`python -m pytest tests/`)
-4. Commit changes (`git commit -m 'Add amazing feature'`)
-5. Push to branch (`git push origin feature/amazing-feature`)
-6. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- **FPL API**: Official Fantasy Premier League API
-- **PuLP**: Linear programming optimization
-- **Streamlit**: Interactive web applications
-- **Typer**: Modern CLI framework
-- **Phase 1 Team**: Advanced ML modeling and data engineering
+1. Fork this repo
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. New app → select your fork → set **Main file path** to `streamlit_app.py`
+4. Click Deploy — that's it. No secrets or env vars required.
 
 ---
 
-**Built with ❤️ for the FPL community**
+## Running Tests
 
-For support, feature requests, or bug reports, please open an issue on GitHub.
+```bash
+python -m pytest tests/ -v
+python -m pytest tests/ --cov=fpl_tool --cov-report=html
+```
+
+---
+
+## License
+
+MIT License — Copyright 2025 shehabbtawfik
+
+---
+
+*Built for the FPL community — and as a showcase of applied ML, optimization, and data engineering.*

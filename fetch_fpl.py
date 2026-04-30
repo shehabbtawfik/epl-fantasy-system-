@@ -18,7 +18,7 @@ class FPLDataCollector:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         })
-        self.raw_data_dir = "/home/ubuntu/data/raw"
+        self.raw_data_dir = "./data/raw"
         os.makedirs(self.raw_data_dir, exist_ok=True)
         
     def make_request(self, endpoint, params=None, max_retries=3):

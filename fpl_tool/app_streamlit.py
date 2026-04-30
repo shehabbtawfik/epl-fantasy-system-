@@ -21,7 +21,7 @@ from fpl_tool.optimizer import FPLOptimizer
 from fpl_tool.validator import FPLValidator
 
 # Environment-aware default paths
-DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "/home/ubuntu/data")
+DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "./data")
 
 # Configure page
 st.set_page_config(

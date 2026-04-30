@@ -18,8 +18,8 @@ from .validator import FPLValidator
 logger = logging.getLogger(__name__)
 
 # Environment-aware default paths
-DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "/home/ubuntu/data")
-DEFAULT_OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "/home/ubuntu/output")
+DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "./data")
+DEFAULT_OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "./output")
 
 class FPLRecommender:
     """
