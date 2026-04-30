@@ -12,7 +12,7 @@
 ## 🚀 Live Demo
 
 **[→ Open the live app](https://shehab-epl.streamlit.app)**
-[![FPL Optimizer Demo — click to watch](./demo_preview.png)](https://github.com/shehabbtawfik/epl-fantasy-system-/raw/main/fpl_demo.mp4)
+![FPL Optimizer Demo](./fpl_demo.gif)
 
 
 The demo pulls **real-time player data** directly from `fantasy.premierleague.com` — no CSV files, no manual updates. Every squad it builds is valid under FPL rules.
