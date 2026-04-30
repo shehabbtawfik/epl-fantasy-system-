@@ -1,6 +1,6 @@
 # ⚽ FPL Optimizer — Live Fantasy Premier League Dashboard
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B)](https://fpl-optimizer.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B)](https://shehab-epl.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B)](https://streamlit.io)
 [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
@@ -11,7 +11,7 @@
 
 ## 🚀 Live Demo
 
-**[→ Open the live app](https://fpl-optimizer.streamlit.app)**
+**[→ Open the live app](https://shehab-epl.streamlit.app)**
 
 The demo pulls **real-time player data** directly from `fantasy.premierleague.com` — no CSV files, no manual updates. Every squad it builds is valid under FPL rules.
 
